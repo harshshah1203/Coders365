@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI-Driven Public Health Chatbot Portal: Innovating healthcare with AI, trusted by thousands of doctors and patients worldwide." />
+  <title>Get Started with Me - AI-Driven Public Health Chatbot Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up { animation: fadeInUp 0.6s ease-out; }
+
+    /* Dropdown styles */
+    .login-menu {
+      position: relative;
+      display: inline-block;
+    }
+    .login-menu:hover .dropdown {
+      display: block;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      min-width: 160px;
+      z-index: 50;
+      transition: opacity 0.2s;
+    }
+    .dropdown a {
+      display: block;
+      padding: 10px 15px;
+      color: #374151;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .dropdown a:hover {
+      background: #f3f4f6;
+    }
+  </style>
+</head>
+<body class="bg-cyan-400 text-slate-800 min-h-screen font-sans leading-relaxed">
+  <!-- Header -->
+  <header class="bg-white shadow-md py-4 px-5 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-slate-800">Get Started with Me</h1>
+      <nav class="login-menu" aria-label="User  login options">
+        <button class="text-slate-700 hover:text-cyan-700 font-medium" aria-haspopup="true" aria-expanded="false" aria-controls="login-dropdown">
+          Login Options ▼
+        </button>
+        <div id="login-dropdown" class="dropdown" role="menu" aria-label="Login menu">
+          <a href="patient/loginpage.html" aria-label="Login as Patient" role="menuitem" tabindex="-1">Patient Login</a>
+          <a href="doctors/doclogin.html" aria-label="Login as Doctor" role="menuitem" tabindex="-1">Doctor Login</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-cyan-500 to-white py-20 px-5 text-center relative overflow-hidden">
+    <div class="max-w-4xl mx-auto relative z-10">
+      <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-800 mb-6 animate-fade-in-up">AI-Driven Public Health Chatbot Portal</h2>
+      <p class="text-lg lg:text-xl text-slate-600 mb-8 animate-fade-in-up">Empowering healthcare with intelligent assistants for doctors and patients. Trusted by thousands worldwide.</p>
+      <a href="#achievements" class="inline-block bg-cyan-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-cyan-800 transition text-lg animate-fade-in-up">Explore Achievements</a>
+    </div>
+    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/71ea14f7-0fa1-403d-9057-488afabcb7e8.png" alt="Bright and clean medical interface dashboard displaying AI chatbot interactions with health data visualizations, patient records, and appointment schedules in a modern digital clinic setting" class="absolute inset-0 w-full h-full object-cover opacity-10" />
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="py-16 px-5 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-3xl font-bold text-slate-800 text-center mb-12">Our Achievements</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center animate-fade-in-up">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/045f3565-261e-440e-9c7e-bbf6e4f15b87.png" alt="Award trophy for innovation in healthcare AI technology, gold medal with certificate background, representing excellence in digital health solutions" class="rounded-lg shadow-md mx-auto w-full object-cover" />
+          <h4 class="text-xl font-semibold text-cyan-700 mt-4">Innovation Award 2023</h4>
+          <p class="text-slate-600">Recognized for groundbreaking AI in healthcare communication.</p>
+        </div>
+        <div class="text-center animate-fade-in-up">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/da143dd4-942b-4ff5-9556-1a9cc23bfd88.png" alt="Group of diverse healthcare professionals collaborating around a digital tablet showing health analytics and patient insights" class="rounded-lg shadow-md mx-auto w-full object-cover" />
+          <h4 class="text-xl font-semibold text-cyan-700 mt-4">Certified Healthcare Partners</h4>
+          <p class="text-slate-600">Integrated with top hospitals and medical institutions globally.</p>
+        </div>
+        <div class="text-center animate-fade-in-up">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b39eb27f-7fbe-43da-8763-422c5df22aa3.png" alt="Chart showing upward trend in user satisfaction and engagement metrics for AI health tools, with positive feedback icons" class="rounded-lg shadow-md mx-auto w-full object-cover" />
+          <h4 class="text-xl font-semibold text-cyan-700 mt-4">High User Satisfaction</h4>
+          <p class="text-slate-600">95% of users report improved efficiency in health management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 px-5 bg-slate-100 text-center">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-3xl font-bold text-slate-800 mb-12">Trusted by Thousands</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="animate-fade-in-up">
+          <div class="text-5xl font-extrabold text-cyan-700">50+</div>
+          <p class="text-xl text-slate-600 mt-2">Partner Hospitals</p>
+        </div>
+        <div class="animate-fade-in-up">
+          <div class="text-5xl font-extrabold text-cyan-700">10,000+</div>
+          <p class="text-xl text-slate-600 mt-2">Satisfied Patients</p>
+        </div>
+        <div class="animate-fade-in-up">
+          <div class="text-5xl font-extrabold text-cyan-700">500+</div>
+          <p class="text-xl text-slate-600 mt-2">Expert Doctors</p>
+        </div>
+      </div>
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dd84f85c-8a41-4b83-9f5a-c061daa0af64.png" alt="Crowded supportive scene of doctors and patients using digital health apps together in a vibrant community health center, smiling faces and positive interactions" class="rounded-lg shadow-md mt-12 w-full object-cover" />
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-16 px-5 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-3xl font-bold text-slate-800 text-center mb-12">What People Say</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-slate-50 rounded-lg p-6 shadow-md animate-fade-in-up">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ba9b20fd-004a-4f02-8a4a-fd147cacaba6.png" alt="Professional headshot of Dr. Emily Carter, a female doctor in her 40s with a stethoscope, smiling confidently in a medical office background" class="rounded-full w-20 h-20 object-cover mx-auto mb-4" />
+          <blockquote class="text-slate-700 italic mb-4">"This platform has revolutionized patient care. Seamless AI integration saves hours daily."</blockquote>
+          <p class="text-cyan-700 font-semibold">Dr. Emily Carter, Cardiologist</p>
+        </div>
+        <div class="bg-slate-50 rounded-lg p-6 shadow-md animate-fade-in-up">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/156ebf17-2a74-4132-ac3e-9696826417e6.png" alt="Friendly photo of John Miller, a male patient in his 50s holding a smartphone with health app open, relaxed expression in home setting" class="rounded-full w-20 h-20 object-cover mx-auto mb-4" />
+          <blockquote class="text-slate-700 italic mb-4">"Easiest way to manage my appointments and meds. Highly recommend!"</blockquote>
+          <p class="text-cyan-700 font-semibold">John Miller, Patient</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 px-5 bg-slate-100">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-3xl font-bold text-slate-800 text-center mb-12">AI Assistant & Chatbot Features</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="bg-white rounded-lg p-6 shadow-md animate-fade-in-up">
+          <h4 class="text-xl font-semibold text-cyan-700 mb-3">24/7 Health Assistance</h4>
+          <p class="text-slate-700">Always available AI for instant health queries.</p>
+        </article>
+        <article class="bg-white rounded-lg p-6 shadow-md animate-fade-in-up">
+          <h4 class="text-xl font-semibold text-cyan-700 mb-3">Personalized Recommendations</h4>
+          <p class="text-slate-700">Tailored advice based on your health profile.</p>
+        </article>
+        <article class="bg-white rounded-lg p-6 shadow-md animate-fade-in-up">
+          <h4 class="text-xl font-semibold text-cyan-700 mb-3">Seamless Communication</h4>
+          <p class="text-slate-700">Direct chats with doctors for quick support.</p>
+        </article>
+        <article class="bg-white rounded-lg p-6 shadow-md animate-fade-in-up">
+          <h4 class="text-xl font-semibold text-cyan-700 mb-3">Appointment Management</h4>
+          <p class="text-slate-700">Schedule and track appointments effortlessly.</p>
+        </article>
+        <article class="bg-white rounded-lg p-6 shadow-md animate-fade-in-up">
+          <h4 class="text-xl font-semibold text-cyan-700 mb-3">Medication Reminders</h4>
+          <p class="text-slate-700">Never miss a dose with smart notifications.</p>
+        </article>
+        <article class="bg-white rounded-lg p-6 shadow-md animate-fade-in-up">
+          <h4 class="text-xl font-semibold text-cyan-700 mb-3">Health Insights</h4>
+          <p class="text-slate-700">Analyze trends for proactive care.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ & Contact Section -->
+  <section class="py-16 px-5 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-3xl font-bold text-slate-800 text-center mb-12">Frequently Asked Questions</h3>
+      <div class="max-w-4xl mx-auto space-y-6">
+        <details class="border border-slate-300 rounded-lg p-4 shadow-sm" open>
+          <summary class="cursor-pointer font-semibold text-cyan-700 text-lg">How do I create a patient account?</summary>
+          <p class="mt-2 text-slate-700">Click on the "Patient Login" option in the top right menu and select "Register" to create your account. Follow the instructions to complete your profile.</p>
+        </details>
+        <details class="border border-slate-300 rounded-lg p-4 shadow-sm">
+          <summary class="cursor-pointer font-semibold text-cyan-700 text-lg">Can doctors access patient health records securely?</summary>
+          <p class="mt-2 text-slate-700">Yes, our platform uses encrypted connections and strict access controls to ensure patient data privacy and security for authorized doctors only.</p>
+        </details>
+        <details class="border border-slate-300 rounded-lg p-4 shadow-sm">
+          <summary class="cursor-pointer font-semibold text-cyan-700 text-lg">Is the AI assistant available 24/7?</summary>
+          <p class="mt-2 text-slate-700">Absolutely! Our AI assistant is designed to provide instant health assistance anytime, day or night.</p>
+        </details>
+        <details class="border border-slate-300 rounded-lg p-4 shadow-sm">
+          <summary class="cursor-pointer font-semibold text-cyan-700 text-lg">How can I contact support for help?</summary>
+          <p class="mt-2 text-slate-700">You can reach our support team via email at <a href="mailto:support@getstartedwithme.com" class="text-cyan-700 underline">support@getstartedwithme.com</a> or call us at <a href="tel:+1234567890" class="text-cyan-700 underline">+1 (234) 567-890</a>. We're here to help!</p>

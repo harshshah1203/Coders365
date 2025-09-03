@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - Secure Recovery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .enthusiasm-text {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container mx-auto">
+        <div class="text-center mb-8">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/818369dd-e8ad-4d20-b90d-d37540e7f2a4.png" alt="Comforting illustration of a patient receiving a message on their phone, symbolizing ease and security in accessing health support, in a reassuring and friendly environment" class="mx-auto rounded-full mb-4">
+            <h1 class="text-3xl font-bold text-indigo-700 enthusiasm-text">Recover Your Access – We're Here to Help!</h1>
+            <p class="text-gray-600">No worries at all! Enter your phone number below, and we'll send a secure OTP via SMS or WhatsApp to get you back into your health dashboard. Your security is our priority – let's regain control together!</p>
+        </div>
+
+        <form id="forgotPasswordForm">
+            <div class="mb-6">
+                <label for="phone" class="block text-sm font-semibold text-gray-700">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required class="mt-1 p-3 border rounded-lg w-full focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., +91 1234567890">
+            </div>
+
+            <div class="mb-6">
+                <p class="text-sm text-gray-700 mb-3">Choose how you'd like to receive your secure reset code:</p>
+                <div class="flex space-x-4">
+                    <button type="button" id="sendSMS" class="flex-1 bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 font-semibold enthusiasm-text">
+                        Send via SMS
+                    </button>
+                    <button type="button" id="sendWhatsApp" class="flex-1 bg-green-600 text-white p-3 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 font-semibold enthusiasm-text">
+                        Send via WhatsApp
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="w-full bg-indigo-600 text-white p-3 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 enthusiasm-text font-semibold mb-4">
+                Proceed to Reset – Empower Your Health Journey!
+            </button>
+        </form>
+
+        <div class="text-center">
+            <p class="text-gray-600">Remember your password? <a href="#" class="text-indigo-600 hover:text-indigo-700 font-semibold">Back to Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        const sendButton = document.getElementById('sendSMS');
+        const whatsAppButton = document.getElementById('sendWhatsApp');
+
+        // Simulate sending OTP via SMS
+        sendButton.addEventListener('click', function() {
+            const phone = document.getElementById('phone').value;
+            if (!phone) {
+                alert('Please enter your phone number first.');
+                return;
+            }
+            alert(`Secure OTP sent to ${phone} via SMS! Check your messages and enter it on the next screen to proceed.`);
+        });
+
+        // Simulate sending OTP via WhatsApp
+        whatsAppButton.addEventListener('click', function() {
+            const phone = document.getElementById('phone').value;
+            if (!phone) {
+                alert('Please enter your phone number first.');
+                return;
+            }
+            alert(`Secure OTP sent to ${phone} via WhatsApp! Open the app to receive your code and continue securely.`);
+        });
+
+        // Form submission (placeholder)
+        document.getElementById('forgotPasswordForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Great! After receiving the OTP, enter it on the secure reset page to update your password.');
+            // In a real app, redirect to OTP verification page
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>

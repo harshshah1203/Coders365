@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI-Driven Public Health Chatbot Portal: Innovating healthcare with AI, trusted by thousands of doctors and patients worldwide." />
+  <title>Get Started with Me - AI-Driven Public Health Chatbot Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      min-height: 100vh;
+    }
+    .enthusiasm-text {
+      color: #ffd700;
+      font-weight: bold;
+    }
+    .patient-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .patient-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    /* Reduce patient image size */
+    .patient-card img {
+      width: 96px; /* 24rem = 96px */
+      height: 96px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body class="font-sans">
+  <div class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-md p-6">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-indigo-700">Public Health Chatbot - Patient Dashboard</h1>
+        <div>
+          <button class="text-indigo-700 hover:text-indigo-900 mr-4">Dashboard</button>
+          <button class="text-indigo-700 hover:text-indigo-900">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto p-6">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6 enthusiasm-text">Manage Your Patients</h2>
+      <p class="text-lg text-gray-600 mb-8">
+        You're making a profound impact by guiding patients through education and care. Below, review their interactions with our AI chatbot, medical histories, and highlighted concerns. Together, we're promoting healthier communities in Odisha!
+      </p>
+
+      <!-- Patient Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Patient 1 -->
+        <div class="bg-white rounded-lg shadow-md p-6 patient-card">
+          <div class="mb-4">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/883a66af-b968-454e-8832-9e96b02e5749.png" alt="Headshot of a patient, an adult male in casual clothing, looking hopeful and attentive, in a home setting with natural light suggesting health consultation" class="rounded-full mx-auto" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Patient: Ramu Sharma</h3>
+          <div class="text-sm text-gray-600 mb-4">
+            <p><strong>Age:</strong> 45 | <strong>Location:</strong> Rural Odisha</p>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-indigo-800 mb-1">Highlighted Disease/Concern:</h4>
+            <p class="text-red-600 font-medium bg-red-50 p-2 rounded">Diabetes Management - Needs dietary advice and insulin tracking.</p>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-green-800 mb-1">Recent Chat with AI Chatbot:</h4>
+            <p class="bg-green-50 p-2 rounded text-gray-700 text-sm">Patient asked: "What foods should I avoid with diabetes?" AI responded: "Limit sugary and starchy foods. Focus on vegetables, lean proteins."</p>
+            <button class="text-indigo-600 hover:underline text-sm mt-1">View Full Chat History</button>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-purple-800 mb-1">Medical History Summary:</h4>
+            <ul class="list-disc list-inside text-gray-700 text-sm">
+              <li>Diagnosed with Type 2 Diabetes 5 years ago</li>
+              <li>Hypertension under control with medication</li>
+              <li>Regular check-ups since 2018</li>
+            </ul>
+          </div>
+          <button class="w-full bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700">Send Personalized Advice</button>
+        </div>
+
+        <!-- Patient 2 -->
+        <div class="bg-white rounded-lg shadow-md p-6 patient-card">
+          <div class="mb-4">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ce61f869-91a4-4fa5-ba44-b5bfee2b3631.png" alt="Headshot of a patient, an adult female in traditional attire, appearing concerned but determined, in a community health center background illustrating proactive health-seeking" class="rounded-full mx-auto" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Patient: Sita Devi</h3>
+          <div class="text-sm text-gray-600 mb-4">
+            <p><strong>Age:</strong> 32 | <strong>Location:</strong> Semi-Urban Odisha</p>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-indigo-800 mb-1">Highlighted Disease/Concern:</h4>
+            <p class="text-red-600 font-medium bg-red-50 p-2 rounded">Postpartum Depression - Requires mental health support and counseling.</p>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-green-800 mb-1">Recent Chat with AI Chatbot:</h4>
+            <p class="bg-green-50 p-2 rounded text-gray-700 text-sm">Patient asked: "How to cope with baby blues?" AI responded: "Seek social support, maintain routine, consult professionals if persistent."</p>
+            <button class="text-indigo-600 hover:underline text-sm mt-1">View Full Chat History</button>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-purple-800 mb-1">Medical History Summary:</h4>
+            <ul class="list-disc list-inside text-gray-700 text-sm">
+              <li>Recent childbirth (6 months ago)</li>
+              <li>No prior mental health issues</li>
+              <li>Vaccination schedule up-to-date for child</li>
+            </ul>
+          </div>
+          <button class="w-full bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700">Send Personalized Advice</button>
+        </div>
+
+        <!-- Patient 3 -->
+        <div class="bg-white rounded-lg shadow-md p-6 patient-card">
+          <div class="mb-4">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4605e903-8b79-4777-bc38-3ff7ff0e8ae5.png" alt="Headshot of a patient, an elderly man with glasses, looking attentive and community-oriented, in a setting with health pamphlets suggesting regular monitoring" class="rounded-full mx-auto" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Patient: Mohan Lal</h3>
+          <div class="text-sm text-gray-600 mb-4">
+            <p><strong>Age:</strong> 68 | <strong>Location:</strong> Rural Odisha</p>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-indigo-800 mb-1">Highlighted Disease/Concern:</h4>
+            <p class="text-red-600 font-medium bg-red-50 p-2 rounded">Chronic Respiratory Issues - Asthma exacerbated by seasonal factors.</p>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-green-800 mb-1">Recent Chat with AI Chatbot:</h4>
+            <p class="bg-green-50 p-2 rounded text-gray-700 text-sm">Patient asked: "What triggers my asthma?" AI responded: "Common triggers include dust, pollen, and smoke. Use inhalers as prescribed."</p>
+            <button class="text-indigo-600 hover:underline text-sm mt-1">View Full Chat History</button>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-purple-800 mb-1">Medical History Summary:</h4>
+            <ul class="list-disc list-inside text-gray-700 text-sm">
+              <li>Asthma diagnosed 20 years ago</li>
+              <li>Smoker for 40 years, quit 5 years ago</li>
+              <li>Vaccinated against seasonal flu annually</li>
+            </ul>
+          </div>
+          <button class="w-full bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700">Send Personalized Advice</button>
+        </div>
+
+        <!-- Patient 4 -->
+        <div class="bg-white rounded-lg shadow-md p-6 patient-card">
+          <div class="mb-4">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bd07585d-78a1-484b-bed2-cf3fa79020c2.png" alt="Headshot of a young patient, an adolescent boy in school uniform, appearing curious and health-conscious, with educational resources in the background for youth health" class="rounded-full mx-auto" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Patient: Aryan Patel</h3>
+          <div class="text-sm text-gray-600 mb-4">
+            <p><strong>Age:</strong> 16 | <strong>Location:</strong> Semi-Urban Odisha</p>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-indigo-800 mb-1">Highlighted Disease/Concern:</h4>
+            <p class="text-red-600 font-medium bg-red-50 p-2 rounded">Adolescent Nutrition Deficiency - Needs guidance on balanced diet and vitamin supplementation.</p>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-green-800 mb-1">Recent Chat with AI Chatbot:</h4>
+            <p class="bg-green-50 p-2 rounded text-gray-700 text-sm">Patient asked: "Why am I always tired?" AI responded: "Possible iron deficiency common in teens. Include iron-rich foods like spinach."</p>
+            <button class="text-indigo-600 hover:underline text-sm mt-1">View Full Chat History</button>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-purple-800 mb-1">Medical History Summary:</h4>
+            <ul class="list-disc list-inside text-gray-700 text-sm">
+              <li>Growth spurts during puberty</li>
+              <li>No chronic conditions</li>
+              <li>Vaccinations up-to-date, including HPV</li>
+            </ul>
+          </div>
+          <button class="w-full bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700">Send Personalized Advice</button>
+        </div>
+
+        <!-- Patient 5 -->
+        <div class="bg-white rounded-lg shadow-md p-6 patient-card">
+          <div class="mb-4">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/259c697d-4560-4673-880b-7e516bbff0bd.png" alt="Headshot of a middle-aged woman, dressing modestly, with a focused expression, in an environment emphasizing preventive care and family wellness" class="rounded-full mx-auto" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Patient: Rekha Kumari</h3>
+          <div class="text-sm text-gray-600 mb-4">
+            <p><strong>Age:</strong> 28 | <strong>Location:</strong> Rural Odisha</p>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-indigo-800 mb-1">Highlighted Disease/Concern:</h4>
+            <p class="text-red-600 font-medium bg-red-50 p-2 rounded">Hypertension Awareness - Education on lifestyle changes and regular monitoring.</p>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-green-800 mb-1">Recent Chat with AI Chatbot:</h4>
+            <p class="bg-green-50 p-2 rounded text-gray-700 text-sm">Patient asked: "High blood pressure symptoms?" AI responded: "Often asymptomatic; monitor regularly, reduce salt and stress."</p>
+            <button class="text-indigo-600 hover:underline text-sm mt-1">View Full Chat History</button>
+          </div>
+          <div class="mb-4">
+            <h4 class="font-semibold text-purple-800 mb-1">Medical History Summary:</h4>
+            <ul class="list-disc list-inside text-gray-700 text-sm">
+              <li>Hypertension detected during pregnancy</li>
+              <li>Family history of heart disease</li>
+              <li>Recently started yoga for stress relief</li>
+            </ul>
+          </div>
+          <button class="w-full bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700">Send Personalized Advice</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-6">
+      <div class="container mx-auto text-center">
+        <p>© 2023 AI-Driven Public Health Chatbot. Empowering Odisha's communities through expert care.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Placeholder for enhanced interactivity, e.g., filter patients or expand chat history
+    // You could add more JavaScript here for dynamic features
+
+    // Example: Alert on sending advice (for demo)
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', function(event) {
+        if (event.target.textContent === 'Send Personalized Advice') {
+          alert('Thank you for your continued commitment! Personalized advice has been queued for dispatch.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

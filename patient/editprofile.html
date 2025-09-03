@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edit Patient Profile - Public Health Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #fcebd0 0%, #ffb347 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .enthusiasm-text {
+      color: #ffd700;
+      font-weight: 700;
+    }
+    .form-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      margin: 2rem auto;
+    }
+    .form-section {
+      margin-bottom: 1.5rem;
+    }
+    .form-section h3 {
+      color: #4f46e5;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-card">
+    <h1 class="text-3xl font-bold text-indigo-700 enthusiasm-text mb-6 text-center">
+      Edit Your Profile – Empower Your Health Journey!
+    </h1>
+    <form id="editProfileForm" novalidate>
+      <!-- Personal Information -->
+      <div class="form-section">
+        <h3>Personal Information</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="fullName" class="block font-semibold text-gray-700 mb-1">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ramu Sharma" />
+          </div>
+          <div>
+            <label for="dob" class="block font-semibold text-gray-700 mb-1">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
+          </div>
+          <div>
+            <label for="gender" class="block font-semibold text-gray-700 mb-1">Gender</label>
+            <select id="gender" name="gender" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+              <option value="" disabled selected>Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+              <option>Prefer not to say</option>
+            </select>
+          </div>
+          <div>
+            <label for="age" class="block font-semibold text-gray-700 mb-1">Age</label>
+            <input type="number" id="age" name="age" min="0" max="120" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="45" />
+          </div>
+          <div class="md:col-span-2">
+            <label for="occupation" class="block font-semibold text-gray-700 mb-1">Occupation</label>
+            <input type="text" id="occupation" name="occupation" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Farmer" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="form-section">
+        <h3>Contact Information</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="email" class="block font-semibold text-gray-700 mb-1">Email Address</label>
+            <input type="email" id="email" name="email" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="ramu.sharma@example.com" />
+          </div>
+          <div>
+            <label for="phone" class="block font-semibold text-gray-700 mb-1">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required pattern="^\+?\d{10,15}$" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="+91 9876543210" />
+          </div>
+          <div class="md:col-span-2">
+            <label for="address" class="block font-semibold text-gray-700 mb-1">Address</label>
+            <textarea id="address" name="address" rows="3" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Village, Block, District, Odisha"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emergency Contact -->
+      <div class="form-section">
+        <h3>Emergency Contact</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="emergencyName" class="block font-semibold text-gray-700 mb-1">Contact Name</label>
+            <input type="text" id="emergencyName" name="emergencyName" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Sita Sharma" />
+          </div>
+          <div>
+            <label for="emergencyPhone" class="block font-semibold text-gray-700 mb-1">Contact Phone</label>
+            <input type="tel" id="emergencyPhone" name="emergencyPhone" required pattern="^\+?\d{10,15}$" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="+91 9876543211" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Medical Information -->
+      <div class="form-section">
+        <h3>Medical Information</h3>
+        <div class="grid grid-cols-1 gap-6">
+          <div>
+            <label for="allergies" class="block font-semibold text-gray-700 mb-1">Allergies</label>
+            <textarea id="allergies" name="allergies" rows="2" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="List any allergies or type 'None'"></textarea>
+          </div>
+          <div>
+            <label for="chronicConditions" class="block font-semibold text-gray-700 mb-1">Chronic Conditions</label>
+            <textarea id="chronicConditions" name="chronicConditions" rows="2" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="E.g., Diabetes, Hypertension"></textarea>
+          </div>
+          <div>
+            <label for="medications" class="block font-semibold text-gray-700 mb-1">Current Medications</label>
+            <textarea id="medications" name="medications" rows="2" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="List medications you are taking"></textarea>
+          </div>
+          <div>
+            <label for="surgeries" class="block font-semibold text-gray-700 mb-1">Past Surgeries</label>
+            <textarea id="surgeries" name="surgeries" rows="2" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="List any surgeries or type 'None'"></textarea>
+          </div>
+          <div>
+            <label for="familyHistory" class="block font-semibold text-gray-700 mb-1">Family Medical History</label>
+            <textarea id="familyHistory" name="familyHistory" rows="2" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="E.g., Diabetes, Hypertension"></textarea>
+          </div>
+          <div>
+            <label for="lifestyle" class="block font-semibold text-gray-700 mb-1">Lifestyle Notes</label>
+            <textarea id="lifestyle" name="lifestyle" rows="2" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="E.g., Non-smoker, exercises daily"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center mt-8">
+        <button type="submit" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold enthusiasm-text hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          Save Changes & Continue Your Health Journey!
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('editProfileForm');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Here you would normally send data to the server
+      alert('Your profile has been updated successfully! Keep shining on your health journey! 🌟');
+      // Optionally reset or redirect
+      // form.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Login - Global Health Awareness Chatbot</title>
+    <!-- TailwindCSS CDN for responsive and attractive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+            color: #FFFFFF;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .btn-link {
+            color: #4facfe;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+        .input-field {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 16px;
+            transition: border-color 0.3s;
+        }
+        .input-field:focus {
+            border-color: #4facfe;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding-top: 10%;
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background: rgba(255, 255, 255, 0.98);
+            margin: auto;
+            padding: 30px;
+            border: none;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            animation: slideIn 0.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .enthusiasm-text {
+            background: linear-gradient(90deg, #ff6b6b, #feca57);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- Attractive Header with Medical-themed Image -->
+        <div class="text-center mb-8">
+            <img src="https://placehold.co/150x100/4facfe/FFFFFF" alt="Global health emblem featuring a stylized globe intertwined with a caduceus symbol, representing universal medical care and public health awareness across countries, in a clean blue and white design" class="mx-auto mb-4 rounded-lg shadow-lg" onerror="this.src='https://placehold.co/150x100/e2e8f0/6b7280?text=Global+Health+Emblem'; this.alt='Fallback: Simple global health symbol';">
+            <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Global Health Portal</h1>
+            <p class="text-lg text-gray-600">Empowering Doctors Worldwide for Better Communities</p>
+            <p class="enthusiasm-text mt-2">Transform Healthcare: Join Our Innovative Network Today!</p>
+        </div>
+
+        <!-- Login Form with Icons for Attractiveness -->
+        <form id="loginForm" class="space-y-6">
+            <div class="relative">
+                <i class="fas fa-user absolute left-3 top-3 text-gray-400"></i>
+                <input type="email" id="email" name="email" required class="input-field pl-10 w-full placeholder-gray-500" placeholder="doctor@hospital.org or Username">
+            </div>
+            <div class="relative">
+                <i class="fas fa-lock absolute left-3 top-3 text-gray-400"></i>
+                <input type="password" id="password" name="password" required class="input-field pl-10 w-full" placeholder="Secure Password">
+            </div>
+            <div class="flex justify-between items-center text-sm">
+                <label class="flex items-center">
+                    <input type="checkbox" class="mr-2 accent-blue-500"> Remember Me  
+                </label>
+                <a href="forgotpassword.html" class="btn-link">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn-primary w-full text-lg">
+                <i class="fas fa-sign-in-alt mr-2"></i>Access Dashboard
+            </button>
+        </form>
+
+        <!-- Universal Registration Option with Enhanced Appeal -->
+        <div class="text-center mt-8 p-4 bg-gradient-to-r from-green-100 to-blue-100 rounded-lg shadow-inner">
+            <p class="text-gray-700 mb-2">New to Our Network? Join Global Health Heroes!</p>
+            <button id="openModal" class="btn-link text-lg px-4 py-2 bg-white rounded-full shadow hover:shadow-md transition">
+                <i class="fas fa-user-plus mr-1"></i>Create Account
+            </button>
+            <p class="text-xs text-gray-500 mt-2">Connect with Doctors Worldwide & Contribute to Cutting-Edge Health Solutions.</p>
+        </div>
+
+        <!-- Registration Modal -->
+        <div id="registrationModal" class="modal">
+            <div class="modal-content">
+                <span class="close float-right text-2xl cursor-pointer text-gray-500 hover:text-gray-700">&times;</span>
+                <h2 class="text-2xl font-bold mb-4 text-gray-900 text-center">Join the Global Movement</h2>
+                <p class="text-sm text-gray-600 mb-6 text-center">Sign up to revolutionize public health education and response via AI Chatbot technology.</p>
+                <form id="registrationForm" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="relative">
+                            <i class="fas fa-user-md absolute left-3 top-3 text-gray-400"></i>
+                            <input type="text" id="regName" name="regName" required class="input-field pl-10 placeholder-gray-500" placeholder="Full Name">
+                        </div>
+                        <div class="relative">
+                            <i class="fas fa-envelope absolute left-3 top-3 text-gray-400"></i>
+                            <input type="email" id="regEmail" name="regEmail" required class="input-field pl-10" placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <i class="fas fa-lock absolute left-3 top-3 text-gray-400"></i>
+                        <input type="password" id="regPassword" name="regPassword" required class="input-field pl-10" placeholder="Create Password">
+                    </div>
+                    <div class="relative">
+                        <i class="fas fa-lock absolute left-3 top-3 text-gray-400"></i>
+                        <input type="password" id="regConfirmPassword" name="regConfirmPassword" required class="input-field pl-10" placeholder="Confirm Password">
+                    </div>
+                    <div class="relative">
+                        <i class="fas fa-certificate absolute left-3 top-3 text-gray-400"></i>
+                        <input type="text" id="regLicense" name="regLicense" required class="input-field pl-10" placeholder="Medical License Number">
+                    </div>
+                    <button type="submit" class="btn-primary w-full text-lg">
+                        <i class="fas fa-rocket mr-2"></i>Launch My Account
+                    </button>
+                </form>
+                <p class="text-xs text-gray-500 mt-4 text-center">Seamlessly integrate with international health databases for real-time insights.</p>
+            </div>
+        </div>
+
+        <!-- Footer with Global Appeal -->
+        <footer class="text-center text-xs text-gray-500 mt-8 border-t pt-4">
+            <p>&copy; 2023 Global Health Initiative. Connecting Doctors Worldwide for Universal Wellness.</p>
+            <p class="mt-1 italic">Innovate, Educate, Elevate – Together for a Healthier Planet.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Enhanced Modal Functionality with Smooth Animations
+        const modal = document.getElementById('registrationModal');
+        const btn = document.getElementById('openModal');
+        const span = document.getElementsByClassName('close')[0];
+
+        btn.onclick = () => modal.style.display = 'block';
+        span.onclick = () => modal.style.display = 'none';
+        window.onclick = (event) => { if (event.target === modal) modal.style.display = 'none'; };
+
+        // Login form validation
+        document.getElementById('loginForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (email === password) {
+                // Redirect to dashboard if both are same
+                window.location.href = "doctordashboard.html";
+            } else {
+                alert("Invalid login. (Hint: Email/Username and Password must be the same)");
+            }
+        });
+
+        // Registration form dummy handler
+        document.getElementById('registrationForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Registration Successful! Welcome to the Global Network. (Verification in Progress)');
+        });
+
+        // On-load Enthusiastic Engagement
+        window.onload = () => {
+            setTimeout(() => {
+                console.log('Exciting Update: Our Global AI Chatbot is live in multiple languages! Dive in and make a difference.');
+            }, 1000);
+        };
+    </script>
+</body>
+</html>

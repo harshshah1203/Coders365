@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doctor Weekly & Monthly Report</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+      min-height: 100vh;
+    }
+    .enthusiasm-text {
+      color: #fbbf24; /* amber-400 */
+      font-weight: 700;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+    .chart-container {
+      max-width: 700px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body class="font-sans flex flex-col min-h-screen">
+  <!-- Header -->
+  <header class="bg-white shadow-md p-6">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-indigo-700 enthusiasm-text">Doctor's Weekly & Monthly Performance Report</h1>
+      <button class="text-indigo-700 hover:text-indigo-900 font-semibold">Logout</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto p-6">
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-gray-900 enthusiasm-text mb-4">Summary Overview</h2>
+      <p class="text-gray-700 mb-6">
+        Review your impact and progress over the past week and month. Your dedication is transforming lives and communities!
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-md p-6 card">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Patients Consulted</h3>
+          <p class="text-4xl font-bold text-gray-800 mb-1">58</p>
+          <p class="text-sm text-gray-500">This week</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 card">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Patients Consulted</h3>
+          <p class="text-4xl font-bold text-gray-800 mb-1">230</p>
+          <p class="text-sm text-gray-500">This month</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 card">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Health Queries Answered</h3>
+          <p class="text-4xl font-bold text-gray-800 mb-1">1,150</p>
+          <p class="text-sm text-gray-500">AI chatbot assisted</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-gray-900 enthusiasm-text mb-4">Detailed Analysis</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Weekly Report -->
+        <div class="bg-white rounded-lg shadow-md p-6 card">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-4">Weekly Report</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-6">
+            <li><strong>Average Consultation Time:</strong> 25 minutes</li>
+            <li><strong>Most Common Conditions:</strong> Diabetes, Hypertension, Respiratory Issues</li>
+            <li><strong>Patient Satisfaction:</strong> 92% positive feedback</li>
+            <li><strong>Follow-up Appointments Scheduled:</strong> 15</li>
+          </ul>
+          <div class="chart-container">
+            <canvas id="weeklyChart" aria-label="Weekly patient consultations chart" role="img"></canvas>
+          </div>
+        </div>
+
+        <!-- Monthly Report -->
+        <div class="bg-white rounded-lg shadow-md p-6 card">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-4">Monthly Report</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-6">
+            <li><strong>Total Consultations:</strong> 230</li>
+            <li><strong>Vaccination Awareness Sessions:</strong> 5</li>
+            <li><strong>Outbreak Alerts Managed:</strong> 2</li>
+            <li><strong>Community Workshops Conducted:</strong> 3</li>
+          </ul>
+          <div class="chart-container">
+            <canvas id="monthlyChart" aria-label="Monthly patient consultations chart" role="img"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 enthusiasm-text mb-4">Your Impact</h2>
+      <p class="text-gray-700 mb-6">
+        Your commitment to educating and caring for patients is reflected in these key metrics. Keep inspiring healthier communities!
+      </p>
+      <div class="bg-white rounded-lg shadow-md p-6 card text-center">
+        <p class="text-3xl font-bold text-green-600 mb-2">+25%</p>
+        <p class="text-lg text-gray-800">Increase in community health awareness this month</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-900 text-white p-6 text-center">
+    <p>© 2024 AI-Driven Public Health Chatbot. Together, building healthier communities!</p>
+  </footer>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const weeklyCtx = document.getElementById('weeklyChart').getContext('2d');
+    const monthlyCtx = document.getElementById('monthlyChart').getContext('2d');
+
+    const weeklyChart = new Chart(weeklyCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          label: 'Patients Consulted',
+          data: [8, 10, 7, 9, 12, 6, 6],
+          backgroundColor: '#4f46e5',
+          borderRadius: 5,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: { enabled: true }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { stepSize: 2 }
+          }
+        }
+      }
+    });
+
+    const monthlyChart = new Chart(monthlyCtx, {
+      type: 'line',
+      data: {
+        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+        datasets: [{
+          label: 'Patients Consulted',
+          data: [50, 55, 60, 65],
+          fill: true,
+          backgroundColor: 'rgba(79, 70, 229, 0.2)',
+          borderColor: '#4f46e5',
+          tension: 0.3,
+          pointRadius: 5,
+          pointBackgroundColor: '#4f46e5',
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: true, labels: { color: '#4f46e5' } },
+          tooltip: { enabled: true }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { stepSize: 10 }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

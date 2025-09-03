@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+        }
+        .enthusiasm-text {
+            color: #ffd700;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-white shadow-md p-6">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-indigo-700">Public Health Chatbot Dashboard</h1>
+                <button class="text-indigo-700 hover:text-indigo-900">Logout</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto p-6">
+            <div class="bg-white rounded-lg shadow-md p-8 mb-8 md:flex md:items-center">
+                <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6c87eb1f-6d41-40fa-928f-202ddf91ac01.png" alt="Professional portrait of a smiling doctor with a stethoscope, in a clean office environment with medical certificates on the wall, conveying trust and expertise" class="rounded-md w-full mx-auto">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4 enthusiasm-text">Welcome, Dr. [Doctor's Name]!</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Thank you for your dedication to empowering communities through health education! Your expertise is lighting the way for patients in rural and semi-urban areas, helping them stay informed about preventive care, symptoms, and vaccinations.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold text-indigo-800 mb-2">Your Specialization</h3>
+                            <p class="text-gray-700">General Medicine</p>
+                            <p class="text-sm text-gray-500 mt-2">You bring essential knowledge to guide patients on a wide range of health topics.</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold text-green-800 mb-2">Years of Experience</h3>
+                            <p class="text-gray-700">10+ Years</p>
+                            <p class="text-sm text-gray-500 mt-2">Your seasoned expertise provides comfort and confidence to those seeking reliable health advice.</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold text-purple-800 mb-2">License Number</h3>
+                            <p class="text-gray-700">MD-123456789</p>
+                            <p class="text-sm text-gray-500 mt-2">Verified and trustworthy – patients can rest assured in your certified care.</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold text-yellow-800 mb-2">Contact Info</h3>
+                            <p class="text-gray-700">Email: doctor.email@example.com<br>Phone: (123) 456-7890</p>
+                            <p class="text-sm text-gray-500 mt-2">Always here to listen and support – reach out any time you're in need!</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 mt-8">
+                        Together, we're building a healthier tomorrow. Your contributions to our AI chatbot are making a tangible difference – let's keep inspiring awareness and wellness!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Additional Dashboard Sections -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Your Health Impact</h3>
+                    <p class="text-gray-700">You've helped educate over 5,000 patients this month through our chatbot platform!</p>
+                    <div class="mt-4">
+                        <span class="text-2xl font-bold text-green-600">+20% Awareness</span>
+                        <p class="text-sm text-gray-500">Increase in community health knowledge.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Upcoming Reminders</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Vaccination schedule update: April 15th</li>
+                        <li>Outbreak alert review: Weekly</li>
+                        <li>Patient query review: Daily</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Quick Access</h3>
+                    <a href="docpatient.html" class="w-full bg-indigo-600 text-white p-2 rounded-md mb-2 hover:bg-indigo-700 block text-center">View Patient</a>
+                    <a href="meetingsandschedules.html" class="w-full bg-green-600 text-white p-2 rounded-md hover:bg-green-700 block text-center">Meeting And Schedules</a>
+                    <a href="reportandanalysis.html" class="w-full bg-purple-600 text-white p-2 rounded-md hover:bg-purple-800 block text-center">Reports And Analysis</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-6">
+            <div class="container mx-auto text-center">
+                <p>© 2023 AI-Driven Public Health Chatbot. Designed for healthier communities.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple enthusiasm feature: Highlight impact stat on hover
+        document.querySelector('.impact-highlight').addEventListener('mouseover', function() {
+            this.style.transition = 'color 0.3s';
+            this.style.color = '#ffd700';
+        });
+        document.querySelector('.impact-highlight').addEventListener('mouseout', function() {
+            this.style.color = '';
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>

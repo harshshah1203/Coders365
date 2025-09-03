@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Profile - Public Health Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fcebd0 0%, #ffb347 100%);
+            min-height: 100vh;
+        }
+        .enthusiasm-text {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-white shadow-md p-6">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-3xl font-bold text-indigo-700 enthusiasm-text">Your Comprehensive Health Profile</h1>
+                <button class="text-indigo-700 hover:text-indigo-900 font-semibold">Logout</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto p-6">
+            <div class="text-center mb-8">
+                <p class="text-lg text-gray-700">Welcome to your personalized health hub! This profile empowers both you and your healthcare providers with all the key details to ensure the best care. Feel inspired to take charge of your well-being!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Profile Picture and Basic Info -->
+                <div class="bg-white rounded-lg shadow-md p-6 profile-card">
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-4 enthusiasm-text">Personal Information</h2>
+                    <div class="text-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cc30079a-1b9d-4cc0-95ba-15886f484b71.png" alt="Smiling portrait of a patient looking empowered and health-conscious, in a bright and motivating environment that inspires well-being and confidence" class="rounded-full mx-auto mb-2">
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong>Name:</strong> Ramu Sharma</li>
+                        <li><strong>Age:</strong> 45 years</li>
+                        <li><strong>Gender:</strong> Male</li>
+                        <li><strong>Date of Birth:</strong> January 15, 1979</li>
+                        <li><strong>Location:</strong> Rural Odisha</li>
+                        <li><strong>Occupation:</strong> Farmer</li>
+                        <li><strong>Email:</strong> ramu.sharma@example.com</li>
+                        <li><strong>Phone:</strong> +91 9876543210</li>
+                        <li><strong>Emergency Contact:</strong> Sita Sharma (+91 9876543211)</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="editprofile.html" class="w-full bg-indigo-600 text-white p-2 rounded-lg hover:bg-indigo-700 enthusiasm-text block text-center">Edit Profile</a>
+                    </div>
+                </div>
+
+                <!-- Medical History -->
+                <div class="bg-white rounded-lg shadow-md p-6 profile-card">
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-4 enthusiasm-text">Medical History</h2>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><strong>Allergies:</strong> None reported</li>
+                        <li><strong>Chronic Conditions:</strong> Diabetes (Type 2, diagnosed 2018)</li>
+                        <li><strong>Medications:</strong> Metformin (500mg daily), Insulin as needed</li>
+                        <li><strong>Surgeries:</strong> Appendectomy (2010)</li>
+                        <li><strong>Family History:</strong> Father with hypertension, Mother with diabetes</li>
+                        <li><strong>Lifestyle:</strong> Non-smoker, occasional alcohol, daily exercise</li>
+                        <li><strong>Mental Health Notes:</strong> No issues reported, proactive about stress management</li>
+                        <li><strong>Recent Check-ups:</strong> Last visit: March 10, 2024 (BP: 120/80, Glucose: 110 mg/dL)</li>
+                    </ul>
+                </div>
+
+                <!-- Health Metrics -->
+                <div class="bg-white rounded-lg shadow-md p-6 profile-card">
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-4 enthusiasm-text">Current Health Metrics</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center bg-indigo-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-indigo-800">Height</h3>
+                            <p class="text-2xl">175 cm</p>
+                        </div>
+                        <div class="text-center bg-green-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-green-800">Weight</h3>
+                            <p class="text-2xl">75 kg</p>
+                        </div>
+                        <div class="text-center bg-blue-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-blue-800">BMI</h3>
+                            <p class="text-2xl">24.5</p>
+                        </div>
+                        <div class="text-center bg-purple-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-purple-800">BMI Status</h3>
+                            <p class="text-lg">Normal</p>
+                        </div>
+                        <div class="text-center bg-yellow-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-yellow-800">Blood Pressure</h3>
+                            <p class="text-2xl">120/80</p>
+                        </div>
+                        <div class="text-center bg-pink-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-pink-800">Blood Glucose</h3>
+                            <p class="text-2xl">110 mg/dL</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vaccination & Immunization -->
+                <div class="bg-white rounded-lg shadow-md p-6 profile-card">
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-4 enthusiasm-text">Vaccination & Immunization</h2>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong>COVID-19:</strong> Fully vaccinated (2 doses, Booster: April 2023)</li>
+                        <li><strong>Tetanus:</strong> Last vaccination: 2022</li>
+                        <li><strong>Pneumonia:</strong> Vaccinated 2020, Booster due 2025</li>
+                        <li><strong>Flu:</strong> Annual vaccine received annually (Last: September 2023)</li>
+                        <li><strong>Typhoid:</strong> Vaccinated 2021</li>
+                        <li><strong>Vitamin D Supplementation:</strong> Ongoing, as per doctor's advice</li>
+                    </ul>
+                    <p class="text-sm mt-4 text-indigo-600 italic">Stay protected! Keeping vaccinations up-to-date is key to your overall health.</p>
+                </div>
+
+                <!-- Health Goals & Achievements -->
+                <div class="bg-white rounded-lg shadow-md p-6 profile-card md:col-span-2">
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-4 enthusiasm-text">Health Goals & Achievements</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold text-green-800 mb-2">Current Goals</h3>
+                            <ul class="list-disc list-inside text-gray-700">
+                                <li>Maintain blood glucose below 110 mg/dL</li>
+                                <li>Lose 5 kg in the next 3 months</li>
+                                <li>Increase physical activity to 30 minutes daily</li>
+                                <li>Improve sleep quality to 7-8 hours per night</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-blue-800 mb-2">Achievements</h3>
+                            <ul class="list-disc list-inside text-gray-700">
+                                <li>Maintained HbA1c below 6.5% for 2 years</li>
+                                <li>Completed 100 days of daily walks (2023)</li>
+                                <li>Successfully reduced medication dosage (2022)</li>
+                                <li>Active participant in community health workshops</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-sm mt-4 text-indigo-600 italic">Your progress is fantastic! Keep setting and achieving goals for a healthier, happier you!</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-indigo-900 text-white p-6">
+            <div class="container mx-auto text-center">
+                <p>© 2024 AI-Driven Public Health Chatbot. Empowering patients and doctors with comprehensive health profiles for optimal care!</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple edit profile functionality (placeholder alert)
+        document.querySelector('button').addEventListener('click', function() {
+            alert('Profile edit feature coming soon! Your dedication to maintaining accurate info is appreciated.');
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>

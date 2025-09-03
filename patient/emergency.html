@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emergency Contacts - Public Health Chatbot Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            min-height: 100vh;
+        }
+        .card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        .emergency-toolbar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Emergency Toolbar -->
+        <div class="emergency-toolbar">
+            <div class="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg">
+                <strong>Quick Dial:</strong> Ambulance: <a href="tel:108" class="underline">108</a> | Police: <a href="tel:100" class="underline">100</a>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+            <h1 class="text-3xl font-bold text-red-600">Emergency Contacts Near Your Area</h1>
+            <p class="text-gray-600 mt-2">Stay prepared! Here are essential contacts for hospitals, emergency services, and more in Odisha. If you're in crisis, call immediately.</p>
+        </header>
+
+        <!-- Hospitals Section -->
+        <section class="bg-white rounded-lg shadow-lg p-6 mb-8" id="hospitals">
+            <h2 class="text-2xl font-bold text-green-600 mb-4">Nearby Hospitals</h2>
+            <p class="text-gray-600 mb-6">EMERGENCY? Head to the nearest facility. We've listed major hospitals in Bhubaneswar and surrounding areas (based on general location). Contact for directions or updates if needed.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="card bg-gray-50 p-4 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3a50214c-9c63-4bfe-974b-b932bcca2d47.png" alt="Exterior view of AIIMS Bhubaneswar, a modern multi-story hospital building with green landscaping and signage indicating emergency and outpatient departments" class="rounded-lg mb-4 w-full object-cover" />
+                    <h3 class="text-xl font-semibold text-gray-800">AIIMS Bhubaneswar</h3>
+                    <p class="text-gray-600 text-sm">Sijua, Bhubaneswar, Odisha</p>
+                    <p class="text-gray-700 text-sm mt-2">Phone: <a href="tel:+916742470100" class="text-blue-600 underline">+91 674 2470100</a></p>
+                    <p class="text-gray-700 text-sm">Emergency: <a href="tel:+916742470900" class="text-blue-600 underline">+91 674 2470900</a></p>
+                    <p class="text-gray-600 text-sm mt-2">Specialties: General, Cardiology, Emergency Care</p>
+                </article>
+                <article class="card bg-gray-50 p-4 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cd3def76-679a-4f12-991c-f0c27cda3a17.png" alt="Front entrance of Apollo Hospitals Bhubaneswar, showcasing a well-lit hospital lobby with reception area and medical signage" class="rounded-lg mb-4 w-full object-cover" />
+                    <h3 class="text-xl font-semibold text-gray-800">Apollo Hospitals Bhubaneswar</h3>
+                    <p class="text-gray-600 text-sm">Plot No. 251, Old Sainik School Road, Bhubaneswar</p>
+                    <p class="text-gray-700 text-sm mt-2">Phone: <a href="tel:+916746607777" class="text-blue-600 underline">+91 674 6607777</a></p>
+                    <p class="text-gray-700 text-sm">Emergency: <a href="tel:+916746607890" class="text-blue-600 underline">+91 674 6607890</a></p>
+                    <p class="text-gray-600 text-sm mt-2">Specialties: Critical Care, Orthopedics, Oncology</p>
+                </article>
+                <article class="card bg-gray-50 p-4 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d4ddf3dd-de3d-4543-bb27-dbdfe9e0675b.png" alt="Clear photo of Capital Hospital Bhubaneswar, depicting a hospital building with parking area and medical transport vehicles" class="rounded-lg mb-4 w-full object-cover" />
+                    <h3 class="text-xl font-semibold text-gray-800">Capital Hospital, Bhubaneswar</h3>
+                    <p class="text-gray-600 text-sm">Unit – 8, Bhubaneswar, Odisha</p>
+                    <p class="text-gray-700 text-sm mt-2">Phone: <a href="tel:+916742398000" class="text-blue-600 underline">+91 674 2398000</a></p>
+                    <p class="text-gray-700 text-sm">Emergency: <a href="tel:+916742398100" class="text-blue-600 underline">+91 674 2398100</a></p>
+                    <p class="text-gray-600 text-sm mt-2">Specialties: General Medicine, Trauma, Pediatrics</p>
+                </article>
+                <article class="card bg-gray-50 p-4 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/42f0c6c1-0662-497f-aa2d-e2fd0585624d.png" alt="Image of SCS Medical College Hospital Cuttack, illustrating a historic hospital campus with modern additions and emergency signage" class="rounded-lg mb-4 w-full object-cover" />
+                    <h3 class="text-xl font-semibold text-gray-800">SCS Medical College Hospital, Cuttack</h3>
+                    <p class="text-gray-600 text-sm">Cuttack, Odisha</p>
+                    <p class="text-gray-700 text-sm mt-2">Phone: <a href="tel:+916712490900" class="text-blue-600 underline">+91 671 2490900</a></p>
+                    <p class="text-gray-700 text-sm">Emergency: <a href="tel:+916712490911" class="text-blue-600 underline">+91 671 2490911</a></p>
+                    <p class="text-gray-600 text-sm mt-2">Specialties: Teaching Hospital, Surgery, Gynecology</p>
+                </article>
+                <article class="card bg-gray-50 p-4 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ce074c24-4fed-4d00-8502-4f94bfe046cc.png" alt="View of Kalinga Institute of Medical Sciences, showing a contemporary hospital with CT scan and X-ray machines visible" class="rounded-lg mb-4 w-full object-cover" />
+                    <h3 class="text-xl font-semibold text-gray-800">Kalinga Institute of Medical Sciences (KIMS)</h3>
+                    <p class="text-gray-600 text-sm">Shakti Vihar, Bhubaneswar</p>
+                    <p class="text-gray-700 text-sm mt-2">Phone: <a href="tel:+916742671234" class="text-blue-600 underline">+91 674 2671234</a></p>
+                    <p class="text-gray-700 text-sm">Emergency: <a href="tel:+916742671891" class="text-blue-600 underline">+91 674 2671891</a></p>
+                    <p class="text-gray-600 text-sm mt-2">Specialties: Multi-Specialty, Diagnostics, Telemedicine</p>
+                </article>
+                <article class="card bg-gray-50 p-4 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f1488078-6b88-4397-9a1c-79a55cef1abe.png" alt="Photograph of MKCC Medical College Hospital, Berhampur, with emergency vehicle bay and medical staff in action" class="rounded-lg mb-4 w-full object-cover" />
+                    <h3 class="text-xl font-semibold text-gray-800">MKCC Medical College Hospital, Berhampur</h3>
+                    <p class="text-gray-600 text-sm">Berhampur, Odisha</p>
+                    <p class="text-gray-700 text-sm mt-2">Phone: <a href="tel:+916802284000" class="text-blue-600 underline">+91 680 2284000</a></p>
+                    <p class="text-gray-700 text-sm">Emergency: <a href="tel:+916802284101" class="text-blue-600 underline">+91 680 2284101</a></p>
+                    <p class="text-gray-600 text-sm mt-2">Specialties: Regional Medical, Neurology, ICU</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Other Emergency Services Section -->
+        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-orange-600 mb-4">Other Emergency Services</h2>
+            <p class="text-gray-600 mb-6">Don't wait in an emergency. Use these all-India numbers or local Odisha contacts for immediate help.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <article class="card bg-gray-50 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-red-600">Ambulance Service</h3>
+                    <p class="text-gray-700 text-sm mt-2">Dial for immediate medical transport.</p>
+                    <p class="text-gray-700 text-sm mt-2">All-India: <a href="tel:108" class="text-blue-600 underline">108</a></p>
+                    <p class="text-gray-700 text-sm">Bhubaneswar Local: <a href="tel:+916741230847" class="text-blue-600 underline">+91 674 1230847</a></p>
+                </article>
+                <article class="card bg-gray-50 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-blue-600">Police</h3>
+                    <p class="text-gray-700 text-sm mt-2">For safety and assistance in emergencies.</p>
+                    <p class="text-gray-700 text-sm mt-2">All-India: <a href="tel:100" class="text-blue-600 underline">100</a></p>
+                    <p class="text-gray-700 text-sm">Bhubaneswar Police Control: <a href="tel:+91674173200" class="text-blue-600 underline">+91 674 173200</a></p>
+                </article>
+                <article class="card bg-gray-50 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-yellow-600">Fire Department</h3>
+                    <p class="text-gray-700 text-sm mt-2">For fire-related emergencies and rescue.</p>
+                    <p class="text-gray-700 text-sm mt-2">All-India: <a href="tel:101" class="text-blue-600 underline">101</a></p>
+                    <p class="text-gray-700 text-sm">Bhubaneswar Fire Service: <a href="tel:+91674140871" class="text-blue-600 underline">+91 674 140871</a></p>
+                </article>
+                <article class="card bg-gray-50 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-purple-600">Women's Helpline</h3>
+                    <p class="text-gray-700 text-sm mt-2">For women in distress or domestic issues.</p>
+                    <p class="text-gray-700 text-sm mt-2">All-India: <a href="tel:181" class="text-blue-600 underline">181</a></p>
+                    <p class="text-gray-700 text-sm">Odisha Women's Helpline: <a href="tel:+916741092007" class="text-blue-600 underline">+91 674 1092007</a></p>
+                </article>
+                <article class="card bg-gray-50 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-green-600">Disaster Management</h3>
+                    <p class="text-gray-700 text-sm mt-2">For floods, cyclones, or major incidents in Odisha.</p>
+                    <p class="text-gray-700 text-sm">Odisha Disaster Control: <a href="tel:+91674151089" class="text-blue-600 underline">+91 674 151089</a></p>
+                    <p class="text-gray-700 text-sm">National: <a href="tel:011-23242019" class="text-blue-600 underline">011-23242019</a></p>
+                </article>
+                <article class="card bg-gray-50 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-indigo-600">Poison Control</h3>
+                    <p class="text-gray-700 text-sm mt-2">Immediate help for poisoning incidents.</p>
+                    <p class="text-gray-700 text-sm mt-2">All-India: <a href="tel:23964981" class="text-blue-600 underline">(Delhi) 23964981</a></p>
+                    <p class="text-gray-700 text-sm">Local Odisha: Consult nearest hospital's emergency.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="bg-red-50 rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-red-600 mb-4">Emergency Tips</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Call emergency numbers immediately if in crisis.</li>
+                <li>Share your location details when calling for help.</li>
+                <li>If unable to speak, tap the SOS button on apps if available.</li>
+                <li>For medical emergencies, provide blood type and allergy info if known.</li>
+                <li>Keep this page bookmarked or printed for reference.</li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-6 rounded-lg text-center">
+            <p>© 2023 AI-Driven Public Health Chatbot Portal. Emergencies first – stay safe!</p>
+            <p class="mt-2">For app-based emergencies, use ODISHA 108 App or install Google Maps for real-time location guides.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Optional: Add click-to-call functionality or location detection
+        // Placeholder for dynamic location-based contacts if geolocation API is used
+    </script>
+</body>
+</html>
+</content>
+</create_file>
